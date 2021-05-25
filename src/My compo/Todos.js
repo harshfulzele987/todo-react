@@ -6,11 +6,14 @@ export default function Todos(props ) {
                              <h4 className ="text-center my-3">Tods List</h4>
                            
                            <div className="text-center">
-
-                           {props.todos.map((todo)=>{
+                        {         props.todos.length===0 ? "NO Todos to display" :
+                           props.todos.map((todo)=>{
                                      return <TodoItem  todo ={todo} key={todo.sno} onDelete ={props.onDelete} />  
 
-                           })}
+                           }
+                           )
+                           }
+                           
                            </div>
 
                     </div>

@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./My compo/Header"
 import Todos from "./My compo/Todos"
 import Footer from "./My compo/Footer"
+import AddTodos from "./My compo/AddTodos"
 import React ,{useState } from 'react'
 function App() {
 const onDelete =(todo) =>{
@@ -10,7 +11,7 @@ const onDelete =(todo) =>{
     console.log("I am ondelte" ,todos)
 
  setTodos(todos.filter((e)=>{
-   return e!==todo;
+   return e!==todo; 
  }));
 }
 
@@ -37,8 +38,10 @@ const onDelete =(todo) =>{
   return (
 <>
 <Header />
+<AddTodos />
 <Todos todos ={todos} onDelete ={onDelete}/>
 <Footer />
+
 </>
   );
 }
